@@ -1,0 +1,365 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:DB/{####}",
+ "creation": "2024-01-04 12:58:49.687146",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_wazoc",
+  "company",
+  "date",
+  "column_break_kwect",
+  "branch",
+  "section_break_xzozk",
+  "tank1",
+  "opening_dip_ms",
+  "ms",
+  "reciept_ms",
+  "column_break_qo1hu",
+  "tank2",
+  "opening_dip_hsd",
+  "hsd",
+  "reciept_hsd",
+  "section_break_csrww",
+  "closing_dip_ms",
+  "closing_stock_ms",
+  "dip_sale_ms",
+  "variation_ms",
+  "column_break_kkfx8",
+  "closing_dip_hsd",
+  "closing_stock_hsd",
+  "dip_sale_hsd",
+  "variation_hsd",
+  "opening_stock_section",
+  "opening_cash",
+  "column_break_4zoxb",
+  "section_break_umont",
+  "day_book_details",
+  "section_break_dveyq",
+  "total_closing_ms",
+  "column_break_glw1m",
+  "total_closing_hsd",
+  "tab_break_o5bra",
+  "section_break_pfrak",
+  "day_book_sales",
+  "tab_break_wxa0t",
+  "section_break_oegtx",
+  "total_collection_from_cash",
+  "opening_cash_balance",
+  "credit_customer",
+  "section_break_fqd0c",
+  "total_cash_collection",
+  "bank_deposite",
+  "closing_cash_collection",
+  "section_break_4miwb",
+  "upi_payment",
+  "cash",
+  "card",
+  "expens"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_4zoxb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_umont",
+   "fieldtype": "Section Break",
+   "label": "Day Book Details"
+  },
+  {
+   "fieldname": "day_book_details",
+   "fieldtype": "Table",
+   "label": "Day Book Details",
+   "options": "Day Book Details"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "opening_stock_section",
+   "fieldtype": "Section Break",
+   "label": "Opening Stock"
+  },
+  {
+   "fetch_from": "opening_dip_ms.volume",
+   "fieldname": "ms",
+   "fieldtype": "Float",
+   "label": "Opening Stock(MS)",
+   "precision": "2"
+  },
+  {
+   "fetch_from": "opening_dip_hsd.volume",
+   "fieldname": "hsd",
+   "fieldtype": "Float",
+   "label": "Opening Stock(HSD)",
+   "precision": "2"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_kwect",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Surat",
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_dveyq",
+   "fieldtype": "Section Break",
+   "label": "Closing Stock"
+  },
+  {
+   "fieldname": "total_closing_ms",
+   "fieldtype": "Float",
+   "label": "Total Closing MS",
+   "precision": "2"
+  },
+  {
+   "fieldname": "column_break_glw1m",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_closing_hsd",
+   "fieldtype": "Float",
+   "label": "Total Closing HSD",
+   "precision": "2"
+  },
+  {
+   "fieldname": "opening_cash",
+   "fieldtype": "Float",
+   "label": "Opening Cash"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_xzozk",
+   "fieldtype": "Section Break",
+   "label": "Dip Reading(Opening)"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_wazoc",
+   "fieldtype": "Section Break",
+   "label": "Company Details"
+  },
+  {
+   "fieldname": "column_break_qo1hu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Motor Speed Tank",
+   "fieldname": "tank1",
+   "fieldtype": "Data",
+   "label": "Tank 1",
+   "read_only": 1
+  },
+  {
+   "default": "High Speed Diesel",
+   "fieldname": "tank2",
+   "fieldtype": "Data",
+   "label": "Tank 2",
+   "read_only": 1
+  },
+  {
+   "fieldname": "opening_dip_ms",
+   "fieldtype": "Link",
+   "label": "Opening Dip(MS)",
+   "options": "Dip Chart Master"
+  },
+  {
+   "fieldname": "opening_dip_hsd",
+   "fieldtype": "Link",
+   "label": "Opening Dip(HSD)",
+   "options": "Dip Chart Master"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_csrww",
+   "fieldtype": "Section Break",
+   "label": "Dip Reading(Closing)"
+  },
+  {
+   "fieldname": "closing_dip_ms",
+   "fieldtype": "Link",
+   "label": "Closing Dip(MS)",
+   "options": "Dip Chart Master"
+  },
+  {
+   "fetch_from": "closing_dip_ms.volume",
+   "fieldname": "closing_stock_ms",
+   "fieldtype": "Float",
+   "label": "Closing Stock(MS)"
+  },
+  {
+   "fieldname": "closing_dip_hsd",
+   "fieldtype": "Link",
+   "label": "Closing Dip(HSD)",
+   "options": "Dip Chart Master"
+  },
+  {
+   "fetch_from": "closing_dip_hsd.volume",
+   "fieldname": "closing_stock_hsd",
+   "fieldtype": "Float",
+   "label": "Closing Stock(HSD)"
+  },
+  {
+   "fieldname": "column_break_kkfx8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tab_break_o5bra",
+   "fieldtype": "Tab Break",
+   "label": "Sale"
+  },
+  {
+   "fieldname": "tab_break_wxa0t",
+   "fieldtype": "Tab Break",
+   "label": "Collection"
+  },
+  {
+   "fieldname": "reciept_ms",
+   "fieldtype": "Data",
+   "label": "Reciept(MS)"
+  },
+  {
+   "fieldname": "reciept_hsd",
+   "fieldtype": "Data",
+   "label": "Reciept(HSD)"
+  },
+  {
+   "fieldname": "dip_sale_ms",
+   "fieldtype": "Data",
+   "label": "Dip Sale(MS)"
+  },
+  {
+   "fieldname": "dip_sale_hsd",
+   "fieldtype": "Data",
+   "label": "Dip Sale(HSD)"
+  },
+  {
+   "fieldname": "variation_ms",
+   "fieldtype": "Data",
+   "label": "Variation(MS)"
+  },
+  {
+   "fieldname": "variation_hsd",
+   "fieldtype": "Data",
+   "label": "Variation(HSD)"
+  },
+  {
+   "fieldname": "day_book_sales",
+   "fieldtype": "Table",
+   "label": "Day Book Sales",
+   "options": "Day Book Sales"
+  },
+  {
+   "fieldname": "section_break_pfrak",
+   "fieldtype": "Section Break",
+   "label": "Day Book Sales"
+  },
+  {
+   "fieldname": "total_cash_collection",
+   "fieldtype": "Float",
+   "label": "Total Cash Collection"
+  },
+  {
+   "fieldname": "bank_deposite",
+   "fieldtype": "Float",
+   "label": "Bank Deposite"
+  },
+  {
+   "fieldname": "closing_cash_collection",
+   "fieldtype": "Float",
+   "label": "Closing Cash Collection"
+  },
+  {
+   "fieldname": "total_collection_from_cash",
+   "fieldtype": "Float",
+   "label": "Total Collection from cash"
+  },
+  {
+   "fieldname": "section_break_fqd0c",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_oegtx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "opening_cash_balance",
+   "fieldtype": "Float",
+   "label": "Opening Cash Balance"
+  },
+  {
+   "fieldname": "credit_customer",
+   "fieldtype": "Float",
+   "label": "Credit Customer"
+  },
+  {
+   "fieldname": "section_break_4miwb",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "upi_payment",
+   "fieldtype": "Float",
+   "label": "UPI Payment"
+  },
+  {
+   "fieldname": "cash",
+   "fieldtype": "Float",
+   "label": "Cash"
+  },
+  {
+   "fieldname": "card",
+   "fieldtype": "Float",
+   "label": "Card"
+  },
+  {
+   "fieldname": "expens",
+   "fieldtype": "Float",
+   "label": "Expens"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-11 22:48:06.841621",
+ "modified_by": "Administrator",
+ "module": "Petro Customize",
+ "name": "Day Book",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

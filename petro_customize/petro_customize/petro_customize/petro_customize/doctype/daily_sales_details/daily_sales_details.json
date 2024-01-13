@@ -1,0 +1,76 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-05 11:29:46.478208",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "payment_method",
+  "customer",
+  "credit",
+  "due",
+  "upi_id",
+  "amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Payment Method",
+   "options": "\nCash\nUPI\nCredit"
+  },
+  {
+   "depends_on": "eval:doc.payment_method == 'Credit'",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "mandatory_depends_on": "eval:doc.payment_method == 'Credit'",
+   "options": "Customer",
+   "read_only_depends_on": "eval:doc.payment_method != 'Credit'"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Float",
+   "label": "Amount"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.payment_method == 'Credit'",
+   "fieldname": "credit",
+   "fieldtype": "Check",
+   "label": "Credit",
+   "read_only_depends_on": "eval:doc.payment_method != 'Credit'"
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.payment_method == 'Credit'",
+   "fieldname": "due",
+   "fieldtype": "Check",
+   "label": "Due",
+   "read_only_depends_on": "eval:doc.payment_method != 'Credit'"
+  },
+  {
+   "depends_on": "eval:doc.payment_method == 'UPI'",
+   "fieldname": "upi_id",
+   "fieldtype": "Data",
+   "label": "UPI ID",
+   "mandatory_depends_on": "eval:doc.payment_method == 'UPI'",
+   "read_only_depends_on": "eval:doc.payment_method != 'UPI'"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-05 11:34:42.056855",
+ "modified_by": "Administrator",
+ "module": "Petro Customize",
+ "name": "Daily Sales Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

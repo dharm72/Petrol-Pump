@@ -1,0 +1,105 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:TNM/{####}",
+ "creation": "2024-01-05 12:00:58.193654",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "date",
+  "column_break_w0xyt",
+  "branch",
+  "section_break_o6vol",
+  "tank",
+  "dip",
+  "column_break_js1ns",
+  "volume",
+  "diff"
+ ],
+ "fields": [
+  {
+   "fieldname": "tank",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tank",
+   "options": "Tank Measurements"
+  },
+  {
+   "fieldname": "dip",
+   "fieldtype": "Link",
+   "label": "Dip",
+   "options": "Dip Chart Master"
+  },
+  {
+   "fetch_from": "dip.volume",
+   "fieldname": "volume",
+   "fieldtype": "Float",
+   "label": "Volume"
+  },
+  {
+   "fetch_from": "dip.diff",
+   "fieldname": "diff",
+   "fieldtype": "Float",
+   "label": "Diff"
+  },
+  {
+   "default": "Today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "column_break_w0xyt",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_o6vol",
+   "fieldtype": "Section Break",
+   "label": "Tank Details"
+  },
+  {
+   "fieldname": "column_break_js1ns",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-05 12:10:20.928912",
+ "modified_by": "Administrator",
+ "module": "Petro Customize",
+ "name": "Tank Master",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

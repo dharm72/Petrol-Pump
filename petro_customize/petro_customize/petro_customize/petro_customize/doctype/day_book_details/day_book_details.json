@@ -1,0 +1,78 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-01-04 12:47:49.001093",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "nozzle_name",
+  "item_name",
+  "opening_meter_rating",
+  "testing",
+  "close_meter_rating",
+  "sale"
+ ],
+ "fields": [
+  {
+   "fieldname": "nozzle_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Nozzle Name",
+   "options": "Nozzle",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "nozzle_name.item_name",
+   "fieldname": "item_name",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Item Name",
+   "options": "\nPetrol\nDiesel",
+   "reqd": 1
+  },
+  {
+   "fieldname": "opening_meter_rating",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Opening Meter Rating",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "close_meter_rating",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Close Meter Rating",
+   "precision": "2"
+  },
+  {
+   "default": "5",
+   "fieldname": "testing",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Testing",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sale",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Sale",
+   "precision": "2"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-01-09 09:20:14.002675",
+ "modified_by": "Administrator",
+ "module": "Petro Customize",
+ "name": "Day Book Details",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,94 @@
+{
+ "_liked_by": "[\"Administrator\"]",
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:TN/{tank_no}",
+ "creation": "2024-01-04 12:18:30.127891",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "company",
+  "column_break_8shdc",
+  "branch",
+  "section_break_ucd0u",
+  "tank_no",
+  "width",
+  "column_break_bbdmb",
+  "depth",
+  "length"
+ ],
+ "fields": [
+  {
+   "fieldname": "width",
+   "fieldtype": "Float",
+   "label": "Width"
+  },
+  {
+   "fieldname": "depth",
+   "fieldtype": "Float",
+   "label": "Depth"
+  },
+  {
+   "fieldname": "length",
+   "fieldtype": "Float",
+   "label": "Length"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_8shdc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "branch",
+   "fieldtype": "Link",
+   "label": "Branch",
+   "options": "Branch"
+  },
+  {
+   "fieldname": "section_break_ucd0u",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tank_no",
+   "fieldtype": "Select",
+   "label": "Tank No",
+   "options": "1\n2\n3\n4\n5\n6"
+  },
+  {
+   "fieldname": "column_break_bbdmb",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-01-05 12:09:13.345500",
+ "modified_by": "Administrator",
+ "module": "Petro Customize",
+ "name": "Tank Measurements",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
